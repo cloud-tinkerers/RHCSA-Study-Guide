@@ -1,0 +1,24 @@
+{
+    "name": "RHCSA Study Guide",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": "."
+    },
+    "mounts": [
+        "source=profile,target=/root,type=volume",
+        "source=vscode,target=/root/.vscode-server,type=volume"
+    ],
+    "customizations": {
+        "extensions": [
+            "ms-vscode.vscode-node-azure-pack",
+            "dbaeumer.vscode-eslint",
+            "esbenp.prettier-vscode",
+            "ms-azuretools.vscode-docker",
+            "hashicorp.terraform"
+        ],
+        "settings": {
+            "terminal.integrated.shell.linux": "/bin/zsh",
+        }
+    },
+    "remoteUser": "root"
+}
